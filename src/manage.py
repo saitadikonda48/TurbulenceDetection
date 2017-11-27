@@ -2,10 +2,16 @@
 import os
 import sys
 
+import webbrowser
+
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "TurbulenceDetection.settings")
+    
     try:
         from django.core.management import execute_from_command_line
+        os.system("python TurbulenceImagery.py")
+        webbrowser.open('http://localhost:8080')
+        os.system("node server.js")
     except ImportError:
         # The above import may fail for some other reason. Ensure that the
         # issue is really that Django is missing to avoid masking other
