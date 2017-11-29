@@ -9,7 +9,7 @@ if __name__ == "__main__":
     
     try:
         from django.core.management import execute_from_command_line
-        os.system("python TurbulenceImagery.py")
+        # os.system("python TurbulenceImagery.py")
         webbrowser.open('http://localhost:8080')
         os.system("node server.js")
     except ImportError:
